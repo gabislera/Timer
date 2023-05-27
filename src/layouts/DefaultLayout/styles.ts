@@ -9,6 +9,12 @@ export const LayoutContainer = styled.div`
   background: ${(props) => props.theme['gray-800']};
   border-radius: 8px;
 
+  @media (max-width: 680px) {
+    margin: 0.5rem 0.5rem;
+    padding: 1rem;
+    height: calc(100vh - 1rem);
+  }
+
   display: flex;
   flex-direction: column;
 `

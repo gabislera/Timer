@@ -6,6 +6,10 @@ export const HistoryContainer = styled.main`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 680px) {
+    padding: 1rem 0;
+  }
+
   h1 {
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
@@ -14,13 +18,19 @@ export const HistoryContainer = styled.main`
 
 export const HistoryList = styled.div`
   flex: 1;
-  overflow: auto;
+  /* overflow: auto; */
   margin-top: 2rem;
 
   table {
     width: 100%;
     border-collapse: collapse;
     min-width: 600px;
+
+    @media (max-width: 680px) {
+      /* width: fit; */
+      min-width: fit-content;
+      transform: translateX(-5px);
+    }
 
     th {
       background-color: ${(props) => props.theme['gray-600']};
@@ -73,6 +83,11 @@ export const Status = styled.span<StatusProps>`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: 680px) {
+    font-size: 0;
+    justify-content: center;
+  }
 
   &::before {
     content: '';
